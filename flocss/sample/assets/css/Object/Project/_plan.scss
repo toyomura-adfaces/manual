@@ -1,0 +1,265 @@
+/*----------------------------------------------------------------------------------------
+plan.scss
+----------------------------------------------------------------------------------------*/
+@use "../../Global/mixin" as mix;
+@use "../../Global/font" as font;
+@use "../../Global/color" as color;
+@use "../../Global/z-Index" as zIndex;
+
+.p-plan-sv {
+    background-image: url(../images/plan/both/planBg.webp);
+}
+
+
+.p-plan-room {
+    margin-top: 30px;
+    background-color: #F4F4F4;
+
+    &__catchHeading {
+        line-height: calc(40/24);
+        max-width: 960px;
+        margin-inline: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__list {
+        background-image: url(../images/plan/both/listBg.webp);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        max-width: 1070px;
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    &__item {
+        background-color: #fff;
+
+        img,
+        a {
+            width: 100%;
+        }
+    }
+
+    &__caution {
+        text-align: center;
+        margin-top: 35px;
+        font-size: 1.4rem;
+    }
+}
+
+.p-plan-facility {
+
+    &__cont {
+
+        &--equip {
+            background-color: #392425;
+        }
+
+        &--speci {
+            background-color: #434440;
+        }
+    }
+
+    &__inner {
+        max-width: 960px;
+        margin-inline: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    &__heading {
+        font-weight: 700;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        &--equip {
+            background-color: #D3D0CE;
+            color: #392425;
+        }
+
+        &--speci {
+            background-color: #392425;
+            color: #D3D0CE;
+        }
+    }
+
+    &__list {
+        width: 85%;
+        margin-inline: auto;
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    &__caution {
+        text-align: center;
+        margin-top: 35px;
+        font-size: 1.4rem;
+        color: #fff;
+    }
+}
+
+.p-modal {
+    &__cont {
+        background-color: #fff;
+        padding: 30px;
+
+        .js-room-close {
+            font-size: 1.6rem;
+            margin-top: 25px;
+            color: #434440;
+            background-color: #D3D0CE;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            display: block;
+            width: 220px;
+            margin-inline: auto;
+        }
+    }
+}
+
+@media(min-width:769px) {
+    .p-plan-room {
+        &__inner {
+            padding-top: 50px;
+            padding-bottom: 90px;
+        }
+
+        &__catchHeading {
+            font-size: 2.4rem;
+            margin-bottom: 80px;
+        }
+
+        &__list {
+            width: 95%;
+        }
+    }
+
+    .p-plan-facility {
+        &__heading {
+            font-size: 2rem;
+
+            &--equip {
+                margin-top: 55px;
+            }
+        }
+
+        &__cont {
+            &--equip {
+                padding-top: 95px;
+                padding-bottom: 60px;
+            }
+
+            &--speci {
+                padding-top: 50px;
+                padding-bottom: 175px;
+            }
+        }
+    }
+
+    .p-location-map {
+        padding-bottom: 100px;
+    }
+}
+
+@media(max-width:768px) {
+    .p-plan-room {
+        &__inner {
+            padding-top: 10%;
+            padding-bottom: 13%;
+        }
+
+        &__catchHeading {
+            font-size: clamp(1.7rem, 0.46rem + 3.308vw, 3rem);
+            margin-bottom: 11.5%;
+        }
+
+        &__list {
+            grid-template-columns: 1fr;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        &__item {
+            text-align: center;
+
+            a,
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .p-plan-facility {
+        &__heading {
+            font-size: 2rem;
+
+            &--equip {
+                margin-top: 10%;
+            }
+        }
+
+        &__list {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__cont {
+            &--equip {
+                padding-top: 10%;
+                padding-bottom: 10%;
+            }
+
+            &--speci {
+                padding-top: 10%;
+                padding-bottom: 15%;
+            }
+        }
+    }
+}
+
+
+@media(max-width:480px) {
+    .p-plan-room {
+        &__list {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    .p-plan-facility {
+        &__list {
+            grid-template-columns: 1fr;
+
+        }
+
+        &__item {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .p-modal {
+        &__cont {
+            padding: 15px;
+
+            .js-room-close {
+                font-size: 1.3rem;
+                margin-top: 25px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                width: 170px;
+            }
+        }
+    }
+
+    .modaal-content-container {
+        padding: 0 !important;
+    }
+}

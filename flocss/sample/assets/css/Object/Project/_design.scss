@@ -1,0 +1,112 @@
+/*----------------------------------------------------------------------------------------
+design.scss
+----------------------------------------------------------------------------------------*/
+@use "../../Global/mixin" as mix;
+@use "../../Global/font" as font;
+@use "../../Global/color" as color;
+@use "../../Global/z-Index" as zIndex;
+
+.p-design-sv {
+    background-image: url(../images/design/both/designBg.webp);
+}
+
+.p-design {
+
+    margin-top: 30px;
+
+    &__facade {
+        background-image: url(../images/design/both/designBg02.webp);
+        background-size: cover;
+    }
+
+    &__catchHeading {
+        color: #fff;
+        max-width: 960px;
+        margin-inline: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 75px;
+        line-height: calc(40/24);
+    }
+
+    &__list {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__entrance {
+        background-color: #707070;
+        padding-top: 250px;
+        padding-bottom: 170px;
+
+    }
+    &__caution{
+        color: #fff;
+        text-align: center;
+        margin-top: 35px;
+        font-size:clamp(1.2rem, 1.151rem + 0.129vw, 1.4rem);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media(min-width:769px) {
+    .p-design {
+        &__catchHeading {
+            font-size: 2.4rem;
+            margin-bottom: 75px;
+        }
+
+        &__facade {
+            padding-top: 50px;
+        }
+
+        &__entrance {
+            padding-top: 250px;
+            margin-top: -160px;
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .p-design {
+        &__catchHeading {
+            font-size: clamp(1.7rem, 0.46rem + 3.308vw, 3rem);
+            margin-bottom: 10%;
+        }
+
+        &__facade {
+            padding-top: 10%;
+        }
+
+        &__entrance {
+            margin-top: -30%;
+            padding-top: 42%;
+            padding-bottom: 15%;
+        }
+    }
+}
+
+@media(min-width:481px) {
+    .p-design {
+        &__list {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+}
+
+@media(max-width:480px) {
+    .p-design {
+        &__list {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        &__caution{
+            text-align: left;
+        }
+    }
+}

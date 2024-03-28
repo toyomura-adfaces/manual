@@ -1,0 +1,72 @@
+/*----------------------------------------------------------------------------------------
+btn.scss
+----------------------------------------------------------------------------------------*/
+@use "../../Global/mixin" as mix;
+@use "../../Global/font" as font;
+@use "../../Global/color" as color;
+@use "../../Global/z-Index" as zIndex;
+
+.c-btn-area {
+    position: sticky;
+    bottom: 30px;
+}
+
+.c-top-link-btn {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #D3D0CE;
+    font-size: 1.8rem;
+    @include mix.Garamond;
+
+    &::before {
+        content: "";
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center center;
+        -webkit-mask-size: contain;
+        mask-image: url(../images/common/both/link_arrow.svg);
+        -webkit-mask-image: url(../images/common/both/link_arrow.svg);
+        background-color: #434440;
+        height: 0.8em;
+        width: 0.8em;
+    }
+
+}
+
+@media(min-width:769px) {
+    .c-top-link-btn {
+        width: 170px;
+        font-size: clamp(1.6rem, 1.467rem + 0.174vw, 1.8rem);
+        &:hover {
+            color: #fff;
+            background-color: #392425;
+    
+            &::before {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .c-top-link-btn {
+        font-size: clamp(1.6rem, 0.264rem + 3.562vw, 3rem);
+        max-width: 340px;
+        display: block;
+        margin-inline: auto;
+    }
+}
+
+@media(max-width:480px) {
+    .c-top-link-btn {
+        max-width: 170px;
+    }
+}

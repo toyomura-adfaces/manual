@@ -1,0 +1,59 @@
+/*----------------------------------------------------------------------------------------
+subVisual.scss
+----------------------------------------------------------------------------------------*/
+@use "../../Global/mixin" as mix;
+@use "../../Global/font" as font;
+
+.c-sv {
+    background-size: cover;
+
+    &__inner {
+        max-width: 960px;
+        margin-inline: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__heading {
+        color: #fff;
+        display: table-cell;
+        vertical-align: middle;
+        line-height: calc(42/24);
+        font-weight: 700;
+    }
+}
+
+@media(min-width:769px) {
+    .c-sv {
+        &__heading {
+            font-size: 2.4rem;
+            padding-top: 160px;
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .c-sv {
+        &__heading {
+            padding-top: 80px;
+            font-size: clamp(1.65rem, 0.934rem + 1.908vw, 2.4rem);
+        }
+    }
+}
+
+@media(min-width:481px) {
+    .c-sv {
+        &__heading {
+            height: 378px;
+        }
+    }
+}
+
+@media(max-width:480px) {
+    .c-sv {
+        &__heading {
+            padding-top: 60px;
+            height: 310px;
+        }
+    }
+}

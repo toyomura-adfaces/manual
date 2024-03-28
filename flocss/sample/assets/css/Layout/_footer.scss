@@ -1,0 +1,109 @@
+/*----------------------------------------------------------------------------------------
+footer.scss
+----------------------------------------------------------------------------------------*/
+@use "../Global/mixin" as mix;
+@use "../Global/font" as font;
+@use "../Global/color" as color;
+@use "../Global/z-Index" as zIndex;
+
+.l-footer {
+    @include mix.NotoCJK;
+    background-color: #fff;
+
+    &__inner {
+
+        max-width: 790px;
+        margin: 0 auto;
+        padding: 20px;
+        display: grid;
+    }
+
+    address {
+        background: #0b495c;
+        margin: 0;
+        padding: 18px 0;
+        color: #fff;
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+        font-style: normal;
+    }
+}
+
+.l-footer-com {
+    li {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    &__logo {
+        margin: 0px 0px 5px 5px;
+    }
+
+    &__name {
+        strong {
+            font-weight: bold;
+            font-size: 16px;
+            margin-right: 7px;
+        }
+    }
+}
+
+.l-footer-contact {
+    &__heading {
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 2px;
+    }
+
+    &__address {
+        font-size: 14px;
+        line-height: 22px;
+
+        &--bold {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    &__tel {
+        font-size: 28px;
+        font-weight: bold;
+        color: #392425;
+
+        &::before {
+            content: url(../images/common/both/tel.svg);
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    }
+
+    &__time {
+        font-size: 12px;
+    }
+}
+
+@media(min-width:769px) {
+    .l-footer {
+        &__inner {
+
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }
+}
+@media(max-width:768px) {
+    .l-footer {
+        &__inner {
+
+            grid-template-columns: 1fr;
+        }
+
+        &__list01{
+            margin-bottom: 10px;
+        }
+
+    }
+}

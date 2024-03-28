@@ -1,0 +1,78 @@
+@mixin side-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+//pxをvwに変換するfunction
+@function _get_vw($size, $viewport: 375) {
+    $rate: calc(100 / $viewport);
+    @return $rate * $size * 1vw;
+}
+
+//フォント用のmixin
+@mixin font-vw($font_size: 10, $viewsize: 375) {
+    font-size: $font_size * 1px;
+    font-size: _get_vw($font_size, $viewsize);
+}
+
+//画像用のmixin
+@mixin img-vw($img_size, $viewsize: 375) {
+    width: $img_size * 1px;
+    width: _get_vw($img_size, $viewsize);
+}
+
+//paddingやmargin用のmixin（widhtやheightでも使える）
+@mixin p-vw($property, $size, $viewsize: 375) {
+    #{$property}: $size * 1px;
+    #{$property}: _get_vw($size, $viewsize);
+}
+
+
+@mixin Serif() {
+    font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Ms P明朝", "MS PMincho", serif;
+}
+
+@mixin SansSerif() {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "Noto Sans JP", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+@mixin NotoSans() {
+    font-family: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+@mixin NotoJP() {
+    font-family: "Noto Serif JP", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Ms P明朝", "MS PMincho", serif;
+}
+
+@mixin NotoCJK() {
+    font-family: "noto-sans-cjk-jp", "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "Noto Sans JP", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+@mixin Garamond() {
+    font-family: "adobe-garamond-pro", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Ms P明朝", "MS PMincho", serif;
+}
+
+@mixin Yumin() {
+    font-family: "yu-mincho-pr6n", "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "Noto Sans JP", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+@mixin hanSerif() {
+    font-family: "source-han-serif-japanese", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Ms P明朝", "MS PMincho", serif;
+}
+
+// Adobe Garamond Pro Regular
+// font-family: "adobe-garamond-pro", serif;
+// font-weight: 400;
+// font-style: normal;
+// Adobe Garamond Pro Italic
+// font-family: "adobe-garamond-pro", serif;
+// font-weight: 400;
+// font-style: italic;
+// Adobe Garamond Pro Bold
+// font-family: "adobe-garamond-pro", serif;
+// font-weight: 700;
+// font-style: normal;
+// Adobe Garamond Pro Bold Italic
+// font-family: "adobe-garamond-pro", serif;
+// font-weight: 700;
+// font-style: italic;

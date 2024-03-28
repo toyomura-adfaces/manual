@@ -1,0 +1,21 @@
+// パーツの読み込み
+@use "inc/header";
+
+//幅の調整
+body {
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+
+.mainArea {
+    .mainArea__txt {
+        color: red;
+    }
+
+    // &__txt {
+    //     color: red;
+    // }
+
+    // &以前のクラスが同じなら下記のような書き方でもOK
+}

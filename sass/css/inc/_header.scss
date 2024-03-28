@@ -1,0 +1,22 @@
+// mixinファイルの読み込み
+// ファイル内で特定の関数を呼びだす場合は読み込む際に as で変換する必要がある
+// as　以降の値は任意でOK
+
+@use "mixin" as mix;
+
+// variableファイルの読み込み
+// 書き方はmixinと同様です
+@use "variable" as val;
+
+.header {
+
+    &__nav {
+        // 変換したものを関数の前に記述する
+        @include mix.flex;
+    }
+    &__nav-item{
+        &--blue{
+            color: val.$color;
+        }
+    }
+}

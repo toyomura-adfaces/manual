@@ -1,0 +1,77 @@
+/*----------------------------------------------------------------------------------------
+scroll.scss
+----------------------------------------------------------------------------------------*/
+@use "../../Global/mixin" as mix;
+@use "../../Global/font" as font;
+@use "../../Global/color" as color;
+@use "../../Global/z-Index" as zIndex;
+
+.u-scroll {
+    position: absolute;
+    right: 5%;
+    bottom: -30px;
+
+    .is-scroll {
+        position: relative;
+        z-index: zIndex.$heightLayer;
+        border: 2px solid #392425;
+        background-color: #fff;
+        border-radius: 50%;
+
+        &::before {
+            content: ("");
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center center;
+            -webkit-mask-size: contain;
+            mask-image: url(../images/common/both/scroll_arrow.svg);
+            -webkit-mask-image: url(../images/common/both/scroll_arrow.svg);
+            background-color: #392425;
+            width: 20px;
+            height: 13px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+    }
+}
+
+
+
+@media(max-width:1200px) {
+    .u-scroll {
+        display: none;
+    }
+}
+
+@media(min-width:769px) {
+    .u-scroll:hover {
+        .is-scroll {
+            background-color: #392425;
+
+            &::before {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+@media(min-width:481px) {
+    .u-scroll {
+        .is-scroll {
+            width: 56px;
+            height: 56px;
+        }
+    }
+}
+
+@media(max-width:480px) {
+    .u-scroll {
+        .is-scroll {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

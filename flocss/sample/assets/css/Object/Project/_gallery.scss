@@ -1,0 +1,75 @@
+/*----------------------------------------------------------------------------------------
+gallery.scss
+----------------------------------------------------------------------------------------*/
+@use "../../Global/mixin" as mix;
+@use "../../Global/font" as font;
+@use "../../Global/color" as color;
+@use "../../Global/z-Index" as zIndex;
+
+.p-gallery-sv {
+    background-image: url(../images/pc/gallery/galleryBg.webp);
+}
+
+.p-gallerys {
+    max-width: 970px;
+    padding: 105px 15px 120px;
+    margin-inline: auto;
+    position: relative;
+    text-align: center;
+
+    &__sub {
+        margin-top: 35px;
+
+        .slick-slide {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .slick-list {
+            width: 90%;
+            margin-inline: auto;
+        }
+
+        .is-slide-arrow {
+            width: 20px;
+            position: absolute;
+        }
+
+        .is-prev-arrow {
+            top: 40px;
+            left: 0;
+        }
+
+        .is-next-arrow {
+            top: 40px;
+            right: 0;
+        }
+
+    }
+
+    &__caution {
+        text-align: left;
+        margin-top: 40px;
+        max-width: 850px;
+        margin-inline: auto;
+        @include mix.side-padding;
+        @include mix.NotoCJK;
+    }
+
+}
+
+@media(max-width:480px) {
+    .p-gallerys {
+        .is-slide-arrow {
+            width: 10px;
+        }
+
+        .is-prev-arrow {
+            top: 25px;
+        }
+
+        .is-next-arrow {
+            top: 25px;
+        }
+    }
+}

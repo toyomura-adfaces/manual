@@ -1,0 +1,31 @@
+/*----------------------------------------------------------------------------------------
+none.scss
+----------------------------------------------------------------------------------------*/
+
+@media (min-width:769px) {
+    .u-tabAppea,.u-tab-onlyNone {
+        display: none !important;
+    }
+}
+
+@media (max-width:768px) {
+    .u-tabNone {
+        display: none !important;
+    }
+
+    select {
+        width: 100%;
+    }
+}
+
+@media (min-width:481px) {
+    .u-spAppea {
+        display: none !important;
+    }
+}
+
+@media (max-width:480px) {
+    .u-spNone,.u-tab-onlyNone{
+        display: none !important;
+    }
+}

@@ -1,0 +1,166 @@
+/*----------------------------------------------------------------------------------------
+acccess.scss
+----------------------------------------------------------------------------------------*/
+@use "../../Global/mixin" as mix;
+@use "../../Global/font" as font;
+@use "../../Global/color" as color;
+@use "../../Global/z-Index" as zIndex;
+
+.p-access-sv {
+    background-image: url(../images/access/both/accessBg.webp);
+}
+
+.p-access-catchHeading {
+    color: #1A1A1A;
+    text-align: center;
+}
+
+.p-access-station {
+    max-width: 840px;
+    margin-inline: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &__heading {
+        background-color: #392425;
+        color: #fff;
+        font-size: 2.4rem;
+        font-weight: 700;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    &__column {
+        max-width: 90%;
+        margin-inline: auto;
+        display: flex;
+        gap: 5%;
+        padding-top: 30px;
+        padding-bottom: 35px;
+    }
+
+    &__img {
+        width: 52%;
+    }
+
+    &__txts {
+        width: 48%;
+    }
+    &__caution{
+        text-align: center;
+        margin-bottom: 35px;
+        font-size: clamp(1.2rem, 1.151rem + 0.129vw, 1.4rem);
+    }
+
+}
+
+.p-access-photos {
+    background-color: #F4F4F4;
+
+    &__inner {
+        max-width: 960px;
+        margin-inline: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 5px;
+    }
+
+    &__item {
+        margin-top: -145px;
+    }
+
+    &__caution {
+        text-align: right;
+        margin-top: 10px;
+        font-size: 1.4rem;
+    }
+
+}
+
+.p-access-drawing {
+    background-color: #F4F4F4;
+    text-align: center;
+}
+
+@media(min-width:769px) {
+    .p-access-catchHeading {
+        font-size: 3rem;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .p-access-station {
+        &__heading {
+            font-size: 2.4rem;
+        }
+    }
+    .p-access-drawing {
+        padding-bottom: 125px;
+    }
+    
+}
+
+@media(max-width:768px) {
+    .p-access-catchHeading {
+        font-size: clamp(1.8rem, -0.013rem + 4.835vw, 3.7rem);
+        padding-top: 10%;
+        padding-bottom: 12%;
+    }
+
+    .p-access-station {
+        &__heading {
+            font-size: clamp(1.6rem, 0.932rem + 1.781vw, 2.3rem);
+        }
+    }
+    .p-access-drawing {
+        padding-bottom: 15%;
+    }
+}
+
+@media(min-width:481px) {
+    .p-access-photos {
+        &__item {
+            margin-top: -145px;
+        }
+    }
+
+    .p-access-station:nth-of-type(3) {
+        padding-bottom: 205px;
+    }
+
+}
+
+@media(max-width:480px) {
+    .p-access-station {
+        &__column {
+            flex-direction: column;
+            max-width: 100%;
+        }
+
+        &__img,
+        &__txts {
+            width: 100%;
+        }
+
+        &__img {
+            margin-bottom: 15px;
+        }
+    }
+
+    .p-access-station:nth-of-type(3) {
+        padding-bottom: 70px;
+    }
+
+    .p-access-photos {
+        &__item {
+            margin-top: -60px;
+        }
+    }
+}

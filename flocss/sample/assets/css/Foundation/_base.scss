@@ -1,0 +1,50 @@
+@use "../Global/mixin" as mix;
+@use "../Global/font" as font;
+
+html {
+    font-weight: 500;
+    font-size: 62.5%;
+    font-feature-settings: "palt";
+    @include mix.hanSerif;
+}
+body{
+    position: relative;
+    font-weight: 500;
+}
+
+a{
+    transition: 0.2s;
+}
+
+
+a,span{
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+iframe{
+    max-width: 100%;
+}
+
+select {
+    -moz-appearance: menulist;
+    -webkit-appearance: menulist;
+}
+
+input,
+select,
+textarea {
+    background-color: #fff;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}

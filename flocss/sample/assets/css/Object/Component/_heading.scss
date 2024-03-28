@@ -1,0 +1,140 @@
+/*----------------------------------------------------------------------------------------
+heading.scss
+----------------------------------------------------------------------------------------*/
+@use "../../Global/mixin" as mix;
+@use "../../Global/font" as font;
+@use "../../Global/color" as color;
+@use "../../Global/z-Index" as zIndex;
+
+/* common */
+
+.c-page-headings {
+    margin-top: 30px;
+    max-width: 960px;
+    margin-inline: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.c-page-heading {
+    @include mix.Garamond;
+    letter-spacing: 1px;
+    color: #434440;
+    display: inline-block;
+    background: linear-gradient(90deg, #93845E, #93845E 30%, #392425);
+    background: -webkit-linear-gradient(0deg, #93845E, #93845E 30%, #392425);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.c-page-subHeading {
+    margin-top: -20px;
+}
+
+.c-cont-headings {
+    text-align: center;
+}
+
+.c-cont-heading {
+    @include mix.Garamond;
+    position: relative;
+    display: inline-block;
+
+    &--white {
+        color: #fff;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: #937C45;
+    }
+}
+
+.c-cont-subHeading {
+    font-size: 1.6rem;
+    padding-top: 15px;
+    color: #434440;
+    font-weight: 700;
+
+    &--white {
+        color: #D3D0CE;
+    }
+}
+
+
+/* top */
+
+.c-top-kinds-heading {
+    @include mix.Garamond;
+    color: rgba(139, 137, 132, 0.8);
+}
+
+.c-top-kinds-subHeading {
+    color: #0F0F0F;
+    margin-top: -15px;
+    font-weight: 700;
+}
+
+
+@media(min-width:769px) {
+
+    /* common */
+
+
+    .c-page-heading {
+        font-size: 7rem;
+    }
+
+    .c-page-subHeading {
+        font-size: 1.8rem;
+    }
+
+    .c-cont-heading {
+        font-size: 4.8rem;
+    }
+
+    /* top */
+
+    .c-top-kinds-heading {
+        font-size: clamp(7.5rem, 6.286rem + 3.236vw, 12.5rem);
+        line-height: calc(105/125);
+    }
+
+    .c-top-kinds-subHeading {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width:768px) {
+    /* common */
+
+    .c-cont-heading {
+        font-size: clamp(3rem, 1.282rem + 4.58vw, 4.8rem);
+    }
+
+    .c-page-heading {
+        font-size: clamp(4.5rem, 0.206rem + 11.45vw, 9rem);
+    }
+    .c-page-subHeading {
+        font-size:clamp(1.3rem, 0.823rem + 1.272vw, 1.8rem);
+    }
+
+    /* top */
+
+    .c-top-kinds-heading {
+        font-size: clamp(7rem, 2.229rem + 12.723vw, 12rem);
+        line-height: calc(105/120);
+    }
+
+    .c-top-kinds-subHeading {
+        font-size: clamp(1.6rem, 0.932rem + 1.781vw, 2.3rem);
+    }
+}
