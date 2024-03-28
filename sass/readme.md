@@ -1,10 +1,10 @@
-# SCSS
+## SCSS
 
 SCSSとは、CSSより簡単に書ける記法。
 
 参照　[https://www.kagoya.jp/howto/it-glossary/web/scss/]
 
-## SCSSを使う理由
+### SCSSを使う理由
 
 ・ネスト構造が使えるので管理がしやすい
 
