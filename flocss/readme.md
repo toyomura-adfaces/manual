@@ -52,17 +52,15 @@ projectに関するものはクラスの頭にpを付けてください。
 
 javascriptやJqueryを使う際は対象のHTMLのクラスの頭にisかjsを付けてください
 
-###
-
-jsとisの使い分け
+### jsとisの使い分け
 
 js...操作する処理をする際
 
 is...処理したことで挙動が変わる際
 
-※例　クリックでcssが変わるプログラム
+### ※例　クリックでcssが変わるプログラム
 
-<button class="c-button js-button is-click"></button>
+class="c-button js-button is-click"
 
 .js-buttonのようにjs-をつけてJavaScriptで操作されることを明示します。
 
