@@ -9,13 +9,13 @@ body {
 
 
 .mainArea {
-    .mainArea__txt {
-        color: red;
-    }
-
-    // &__txt {
+    // .mainArea__txt {
     //     color: red;
     // }
+
+    &__txt {
+        color: red;
+    }
 
     // &以前のクラスが同じなら下記のような書き方でもOK
 }
