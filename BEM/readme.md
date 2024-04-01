@@ -1,13 +1,6 @@
-## BEMとは
-BEMはBlock Element Modifierの略で、CSSを設計･命名していく手法。
+## BEM
 
-Block： 大枠となる独立した要素
-
-Element： Block中の要素
-
-Modifier： BlockやElementのスタイル
-
-コンテンツごとにそのタグが何を表しているのかを一目で分かるようにクラス付けをします。
+BEMを使ってください。
 
 ### 参照
 　

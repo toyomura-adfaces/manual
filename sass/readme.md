@@ -1,18 +1,14 @@
 ## SCSS
 
-SCSSとは、CSSより簡単に書ける記法。
+SCSSを使ってください。
 
-参照　[https://www.kagoya.jp/howto/it-glossary/web/scss/]
 
-### SCSSを使う理由
+### 参照
 
-・ネスト構造が使えるので管理がしやすい
+SCSSとは　[https://www.kagoya.jp/howto/it-glossary/web/scss/]
 
-・変数やmixinが使える
 
-　mixinとは　[https://www.asobou.co.jp/blog/web/sass-mixin]
-
-・ファイルを分割して管理できる(自動で一つのファイルに集約される)
+mixin使い方　[https://www.asobou.co.jp/blog/web/sass-mixin]
 
 
 

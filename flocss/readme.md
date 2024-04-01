@@ -1,10 +1,8 @@
-## FLOCSSとは
+## FLOCSS
 
-CSS設計手法の一つ
+FLOCSSを使ってください。
 
-使用にあたり、BEMやSCSSの知識が必要になります。
-
-参照[https://tane-be.co.jp/knowledge/web-design/2270/]
+CSS設計手法の一つで、使用にあたり、BEMやSCSSの知識が必要になります。
 
 ## ファイルの種類
 
@@ -24,7 +22,7 @@ base.scssは適宜変更して構いません。(従来のcommon.css的なイメ
 
 ページを構成するヘッダーやメインのコンテンツエリア、サイドバーやフッターといったプロジェクト共通のコンテナーブロックのスタイルを定義してください。
 
-projectに関するものはクラスの頭にlを付けてください。
+Layoutに関するものはクラスの頭にlを付けてください。
 
 ### Project
 
@@ -42,11 +40,15 @@ projectに関するものはクラスの頭にpを付けてください。
 
 色だけが違う場合はprojectかUtilityのクラスを別途付与
 
+Layoutに関するものはクラスの頭にcを付けてください。
+
 ### Utility
 
 わずかなスタイルの調整のための便利クラスなどを定義
 
 その場所だけ余白を作りたい...等があった際に使用　煩雑化するので多用はしない方がいいです。
+
+Utilityに関するものはクラスの頭にcを付けてください。
 
 ## js使用の際
 
@@ -69,3 +71,7 @@ class="c-button js-button is-click"
 is-clickのみに定義するのではなく、c-button.is-clickのように定義してください。
 
 （他のオブジェクトに対する.is-clickにスタイルが当たるのを防ぐため）
+
+### 参照
+
+FLOCSS [https://tane-be.co.jp/knowledge/web-design/2270/]
