@@ -1,4 +1,4 @@
-## FLOCSS
+# FLOCSS
 
 FLOCSSを使ってください。
 
